@@ -5,10 +5,11 @@ var Note = require('./note.model');
 
 // Get list of notes
 exports.index = function(req, res) {
-    Note.find({userId:req.params.userId},function (err, notes) {
-        if(err) { return handleError(res, err); }
-        return res.json(200, notes);
-    });
+  //return current user notes in reverse chronological order
+  Note.find({userId:req.params.userId}).sort({created_on:'desc'}).exec(function(err,notes){
+    if(err) { return handleError(res, err); }
+    return res.json(200, notes);
+  });
 };
 
 // Get a single note

@@ -417,3 +417,25 @@ md-dialog-content .list-item4:hover,span .list-item4:hover{
 .hide-div{
   visibility: hidden;
 }
+/*Card footer */
+.tcs-card__footer {
+  position: relative;
+  color: #a3a9ab;
+  bottom: 20px;
+  /*left: 20px;*/
+  /*right: 20px;*/
+  font-size: 14px;
+}
+
+.card__footer .icon--comment {
+  margin-left: 10px;
+}
+.card__footer span{
+  margin-top:40px;
+  margin-left:15px;
+}
+.card_icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 2px;
+}

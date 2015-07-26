@@ -4,12 +4,8 @@ var app=angular.module('stickyApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'btford.socket-io',
   'ui.router',
-  //'ui.bootstrap',
   'ngMaterial',
-  'ngMdIcons',
-  'materialDatePicker',
   'ngNotify',
   'textAngular'
 ])

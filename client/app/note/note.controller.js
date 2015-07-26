@@ -13,6 +13,11 @@ angular.module('stickyApp')
         .success(function(data){
           $log.info(data);
           vm.notes=data;
+          data.sort(function(a,b){
+            return b._id- a._id;
+          });
+          $log.info(data);
+          vm.notes=data;
         })
         .error(function(){
 
@@ -94,6 +99,22 @@ angular.module('stickyApp')
         });
     };
 
+    //confirm delete
+    vm.confirmDelete=function(ev,note){
+      var confirm = $mdDialog.confirm()
+        .parent(angular.element(document.body))
+        .title('Do you want to delete this note?')
+        .content('Deleted note can\'t be restored.')
+          .ariaLabel('Delete')
+          .ok('Delete')
+          .cancel('Cancel')
+          .targetEvent(ev);
+      $mdDialog.show(confirm).then(function() {
+        vm.delete(note);
+      }, function() {
+
+      });
+    };
     //delete a not from db and update UI
     vm.delete=function(note){
       $log.info(note);
