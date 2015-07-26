@@ -413,3 +413,7 @@ md-dialog-content .list-item4:hover,span .list-item4:hover{
   /*overflow-y: scroll !important;*/
   /*resize:vertical !important;*/
 }
+
+.hide-div{
+  visibility: hidden;
+}

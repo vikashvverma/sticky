@@ -92,7 +92,7 @@
           </md-list-item>
           </md-list>
       </md-content>
-      <md-button class="md-raised" style="background-color: rgb(16,108,200);color:#fff;" ui-sref="main.notes" ng-if="isLoggedIn">Signup and get started<md-icon md-font-set="fa fa-sign-in fa-2x" style="color:#fff;margin-top: -8px;margin-left: 10px;"></md-icon> </md-button>
+      <md-button class="md-raised" style="background-color: rgb(16,108,200);color:#fff;" ui-sref="main.notes" ng-if="!vm.isLoggedIn()">Get started<md-icon md-font-set="fa fa-sign-in fa-2x" style="color:#fff;margin-top: -8px;margin-left: 10px;"></md-icon> </md-button>
     </md-whiteframe>
     <md-whiteframe class="md-whiteframe-z3 md-accent second" layout layout-padding  layout-align="center center">
       <md-content style="width:100%;background: inherit;"  layout-sm="column" >

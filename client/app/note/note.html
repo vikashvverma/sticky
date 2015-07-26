@@ -1,6 +1,6 @@
 <div ></div>
 
-<md-whiteframe ng-if="!vm.hasDialog" class="md-whiteframe-z3" layout="row" layout-align="space-between end" layout-padding layout-margin style="margin:50px;    color: rgba(0,0,0,0.5);cursor: pointer;" ng-click="vm.openEditor($event);">
+<md-whiteframe ng-class="{'hide-div':vm.hasDialog}" class="md-whiteframe-z3" layout="row" layout-align="space-between end" layout-padding layout-margin style="margin:50px;    color: rgba(0,0,0,0.5);cursor: pointer;" ng-click="vm.openEditor($event);">
  <div style="    height: 30px;    line-height: 30px;">Add note</div>
   <md-divider></md-divider>
   <div style="    height: 30px;    line-height: 30px;">

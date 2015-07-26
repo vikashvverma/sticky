@@ -3,19 +3,6 @@
   <!--<img ng-src="{{imagePath}}" class="md-card-image" alt="Sticky Image">-->
   <md-card-content>
     <md-content layout-padding class="autoScroll">
-
-      <!--<md-input-container class="md-icon-float" >-->
-      <!--&lt;!&ndash; Use floating label instead of placeholder &ndash;&gt;-->
-      <!--<label>Name</label>-->
-      <!--<md-icon md-font-set="fa fa-user fa-2x"></md-icon>-->
-      <!--<input ng-model="vm.user.name" type="text">-->
-      <!--</md-input-container>-->
-      <!--<md-input-container class="md-icon-float" >-->
-      <!--&lt;!&ndash; Use floating label instead of placeholder &ndash;&gt;-->
-      <!--<label>Name</label>-->
-      <!--<md-icon md-font-set="fa fa-user fa-2x"></md-icon>-->
-      <!--<input ng-model="vm.user.name" type="text">-->
-      <!--</md-input-container>-->
       <form name="registrationform" novalidate>
 
         <md-toolbar>
@@ -25,14 +12,6 @@
             </h2>
           </div>
         </md-toolbar>
-        <!--<div id="thumbnail">-->
-        <!--<img src="./images/avatar_default.png"  id="avatar_default" ng-hide="profile.avatar" ng-click="selectAvatar();" />-->
-        <!--<i class="fa fa-long-arrow-left fa-3px" ng-hide="profile.avatar">Select Profile Picture</i>-->
-        <!--<span id="avatar_thumbnail"  ng-show="profile.avatar" ng-click="selectAvatar();"></span>-->
-        <!--</div>-->
-        <!--<md-input-container class="input-field" style="display:none;" flex>-->
-        <!--<input ng-model="profile.avatar" accept="image/*" id="avatar" type="file" file-upload class="validate">-->
-        <!--</md-input-container>-->
 
         <md-content class="md-padding">
           <div layout layout-sm="column" layout-md="column">
@@ -54,14 +33,6 @@
               </label>
               <i class="fa fa-birthday-cake prefix blue-text"></i>
               <input ng-model="vm.user.dob"  ng-click="clicked();" type="date" id="dob" class=" datepicker" ng-required="true" aria-label="Date of Birth"/>
-
-              <!--<mb-datepicker element-id='dob'-->
-              <!--input-class="dob"-->
-              <!--input-name="dob"-->
-              <!--arrows="vm.arrows"-->
-              <!--calendar-header="header"-->
-              <!--date="vm.userdate"-->
-              <!--date-format="DD/MM/YYYY" ></mb-datepicker>-->
             </md-input-container>
             <md-input-container class="input-field" flex>
               <i class="fa fa-phone prefix blue-text"></i>
