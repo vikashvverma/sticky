@@ -1,0 +1,46 @@
+<div ></div>
+
+<md-whiteframe ng-if="!vm.hasDialog" class="md-whiteframe-z3" layout="row" layout-align="space-between end" layout-padding layout-margin style="margin:50px;    color: rgba(0,0,0,0.5);cursor: pointer;" ng-click="vm.openEditor($event);">
+ <div style="    height: 30px;    line-height: 30px;">Add note</div>
+  <md-divider></md-divider>
+  <div style="    height: 30px;    line-height: 30px;">
+    <md-icon md-font-set="fa fa-th-list fa-2x" style="margin-top: -5px;margin-right: 20px;"></md-icon>
+    <md-icon md-font-set="fa fa-file-image-o fa-2x" style="margin-top: -7px;"></md-icon>
+  </div>
+  </md-input-container>
+  </md-whiteframe>
+<!--<md-whiteframe class="md-whiteframe-z3" layout layout-align="space-around center" layout-padding >-->
+  <!--<md-content ng-bind-html="vm.editor"></md-content>-->
+  <!--</md-whiteframe>-->
+<md-whiteframe class="md-whiteframe-z2"  layout-padding layout="column">
+  <md-card ng-repeat="note in vm.notes" flex-sm="90" flex-md="45" flex-lg="33" flex-gt-lg="33">
+    <!--<img ng-src="{{test.image}}" class="md-card-image" alt="image">-->
+    <md-card-content>
+      <h2 class="md-title md-primary">{{note.title}}</h2>
+      <p ng-bind-html="note.description"> </p>
+    </md-card-content>
+    <md-divider></md-divider>
+
+    <div class="md-actions" layout="row" layout-align="end end">
+      <md-button class="md-fab md-primary" aria-label="Share" >
+        <md-tooltip>
+          Share
+        </md-tooltip>
+        <md-icon md-font-set="fa fa-share-alt fa-2x" class="nav"></md-icon>
+      </md-button>
+      <md-button class="md-fab md-primary" aria-label="Edit" ng-click="vm.edit($event,note);" >
+        <md-tooltip>
+          Edit
+        </md-tooltip>
+        <md-icon md-font-set="fa fa-pencil fa-2x" class="nav"></md-icon>
+      </md-button>
+      <md-button class="md-fab md-warn" aria-label="Delete" ng-click="vm.delete(note);">
+        <md-tooltip>
+          Delete
+        </md-tooltip>
+        <md-icon md-font-set="fa fa-trash fa-2x" class="nav"></md-icon>
+      </md-button>
+    </div>
+  </md-card>
+
+</md-whiteframe>

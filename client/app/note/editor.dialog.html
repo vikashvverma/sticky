@@ -1,0 +1,30 @@
+<md-dialog aria-label="Create a Note" >
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Create a Note</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-font-set="fa fa-times fa-2x"  aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content layout="column" layout-padding >
+      <md-input-container flex>
+        <label>Title</label>
+        <input ng-model="note.title">
+      </md-input-container>
+      <div text-angular ng-model="note.description" flex style="max-height: 300px;"></div>
+
+    </md-dialog-content>
+    <div class="md-actions" layout="row">
+      <span flex></span>
+      <md-button ng-click="cancel()" class="md-warn   shadow">
+        Cancel
+      </md-button>
+      <md-button ng-click="hide()" class="md-primary  shadow">
+        Save
+      </md-button>
+    </div>
+  </form>
+</md-dialog>
